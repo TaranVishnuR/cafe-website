@@ -1,0 +1,213 @@
+.about {
+  padding: 120px 8%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 80px;
+
+  background: #f5f0d4;
+
+  overflow: hidden;
+}
+
+/* IMAGE SIDE */
+
+.imageSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutImage {
+  width: 100%;
+  max-width: 620px;
+
+  height: 520px;
+
+  object-fit: cover;
+
+  border-radius: 32px;
+
+  box-shadow: 0 30px 60px rgba(0,0,0,.12);
+
+  transition: .4s ease;
+}
+
+.aboutImage:hover {
+  transform: translateY(-8px);
+}
+
+/* CONTENT */
+
+.content {
+  max-width: 650px;
+}
+
+.sectionTag {
+  display: inline-block;
+
+  padding: 12px 22px;
+
+  border-radius: 999px;
+
+  background: rgba(5,153,140,.12);
+
+  color: #05998c;
+
+  font-weight: 600;
+
+  margin-bottom: 25px;
+}
+
+.content h2 {
+  font-size: 4rem;
+
+  line-height: 1.05;
+
+  color: #111;
+
+  margin-bottom: 25px;
+}
+
+.content h2 span {
+  color: #05998c;
+}
+
+.content p {
+  color: #555;
+
+  font-size: 1.08rem;
+
+  line-height: 1.9;
+
+  margin-bottom: 18px;
+}
+
+/* STATS */
+
+.stats {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 16px;
+
+  margin-top: 35px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 16px 20px;
+
+  background: rgba(255,255,255,.8);
+
+  backdrop-filter: blur(10px);
+
+  border-radius: 18px;
+
+  border: 1px solid rgba(5,153,140,.1);
+
+  transition: .3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+
+  background: white;
+}
+
+.card svg {
+  color: #05998c;
+  font-size: 1.2rem;
+}
+
+.card span {
+  font-weight: 600;
+  color: #111;
+}
+
+/* MOBILE IMAGE */
+
+.mobileImage {
+  display: none;
+}
+
+/* TABLET */
+
+@media (max-width: 992px) {
+  .about {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+
+    gap: 50px;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .stats {
+    justify-content: center;
+  }
+
+  .content h2 {
+    font-size: 3rem;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 576px) {
+  .about {
+    padding: 90px 6%;
+  }
+
+  .imageSection {
+    display: none;
+  }
+
+  .mobileImage {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 25px;
+  }
+
+  .mobileAboutImage {
+    width: 100%;
+    max-width: 300px;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 24px;
+
+    box-shadow: 0 20px 40px rgba(0,0,0,.12);
+  }
+
+  .content h2 {
+    font-size: 2.5rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+  .card {
+    justify-content: center;
+  }
+}

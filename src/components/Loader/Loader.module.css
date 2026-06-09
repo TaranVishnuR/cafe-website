@@ -1,0 +1,357 @@
+.loader {
+  width: 100%;
+  height: 100vh;
+
+  background: linear-gradient(
+    135deg,
+    #05998c,
+    #10b981
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  overflow: hidden;
+  position: relative;
+
+  position: fixed;   /* ADD THIS */
+  inset: 0;          /* ADD THIS */
+  z-index: 9999;
+}
+
+/* ICE CREAM */
+
+.iceCreamWrapper {
+  position: relative;
+  width: 280px;
+  height: 320px;
+
+  animation: float 3s ease-in-out infinite;
+
+  z-index: 2;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* CUP */
+
+.cup {
+  position: absolute;
+
+  width: 120px;
+  height: 135px;
+
+  left: 80px;
+  top: 130px;
+
+  background: #7fd8d0;
+
+  border-radius: 10px 10px 22px 22px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.cup::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      rgba(255,255,255,.15) 0,
+      rgba(255,255,255,.15) 8px,
+      transparent 8px,
+      transparent 16px
+    );
+}
+
+.cup span {
+  position: relative;
+  z-index: 2;
+
+  color: #ff5f7d;
+
+  font-size: 2rem;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  text-shadow: 0 1px 2px rgba(255,255,255,0.25);
+}
+
+/* SWIRL */
+
+.swirl {
+  position: absolute;
+
+  width: 220px;
+  height: 180px;
+
+  left: 30px;
+  top: 0;
+}
+
+.top {
+  width: 70px;
+  height: 45px;
+
+  background: white;
+
+  margin: auto;
+
+  border-radius: 50px;
+}
+
+.middle {
+  width: 120px;
+  height: 58px;
+
+  background: white;
+
+  margin: -5px auto 0;
+
+  border-radius: 50px;
+}
+
+.bottom {
+  width: 180px;
+  height: 85px;
+
+  background: linear-gradient(
+    180deg,
+    #ffffff,
+    #ffe6ee
+  );
+
+  margin: -5px auto 0;
+
+  border-radius: 60px;
+}
+
+/* TOPPINGS */
+
+.topping {
+  position: absolute;
+
+  width: 14px;
+  height: 14px;
+
+  background: #ff5f7d;
+  border-radius: 50%;
+
+  z-index: 5;
+}
+
+.t1 {
+  top: 18px;
+  left: 95px;
+}
+
+.t2 {
+  top: 58px;
+  left: 68px;
+}
+
+.t3 {
+  top: 65px;
+  right: 62px;
+}
+
+/* TEXT */
+
+.content {
+  text-align: center;
+  margin-top: -35px;
+  z-index: 2;
+}
+
+.content h1 {
+  color: white;
+
+  font-size: 4rem;
+  font-weight: 800;
+
+  letter-spacing: 5px;
+}
+
+.content p {
+  color: rgba(255,255,255,.85);
+
+  margin-top: 10px;
+
+  font-size: 1.1rem;
+}
+
+/* BUBBLES */
+
+.bubble1,
+.bubble2,
+.bubble3 {
+  position: absolute;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,.12);
+
+  backdrop-filter: blur(4px);
+
+  z-index: 0;
+}
+
+.bubble1 {
+  width: 180px;
+  height: 180px;
+
+  left: 15%;
+  top: 10%;
+
+  animation: bubbleFloat 6s ease-in-out infinite;
+}
+
+.bubble2 {
+  width: 120px;
+  height: 120px;
+
+  right: 10%;
+  bottom: 15%;
+
+  animation: bubbleFloat 8s ease-in-out infinite;
+}
+
+.bubble3 {
+  width: 90px;
+  height: 90px;
+
+  top: 18%;
+  right: 20%;
+
+  animation: bubbleFloat 5s ease-in-out infinite;
+}
+
+@keyframes bubbleFloat {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-25px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .iceCreamWrapper {
+    width: 180px;
+    height: 220px;
+  }
+
+  .cup {
+    width: 85px;
+    height: 95px;
+
+    left: 48px;
+    top: 95px;
+  }
+
+  .cup span {
+    font-size: 1.4rem;
+  }
+
+  .swirl {
+    width: 130px;
+    height: 110px;
+
+    left: 25px;
+  }
+
+  .top {
+    width: 45px;
+    height: 28px;
+  }
+
+  .middle {
+    width: 75px;
+    height: 38px;
+  }
+
+  .bottom {
+    width: 110px;
+    height: 55px;
+  }
+
+  .topping {
+    width: 10px;
+    height: 10px;
+  }
+
+  .t1 {
+    top: 12px;
+    left: 56px;
+  }
+
+  .t2 {
+    top: 38px;
+    left: 35px;
+  }
+
+  .t3 {
+    top: 42px;
+    right: 32px;
+  }
+
+  .content {
+    margin-top: -10px;
+    padding: 0 20px;
+  }
+
+  .content h1 {
+    font-size: 2.2rem;
+    line-height: 1.1;
+
+    letter-spacing: 2px;
+  }
+
+  .content p {
+    font-size: 0.95rem;
+  }
+
+  .bubble1 {
+    width: 120px;
+    height: 120px;
+  }
+
+  .bubble2 {
+    width: 90px;
+    height: 90px;
+  }
+
+  .bubble3 {
+    width: 70px;
+    height: 70px;
+  }
+}

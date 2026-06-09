@@ -1,0 +1,196 @@
+.featured {
+  padding: 120px 0;
+
+  background: #f5f0d4;
+
+  overflow: hidden;
+}
+
+/* HEADING */
+
+.heading {
+  text-align: center;
+
+  max-width: 700px;
+
+  margin: 0 auto 70px;
+}
+
+.heading span {
+  display: inline-block;
+
+  padding: 12px 22px;
+
+  border-radius: 999px;
+
+  background: rgba(5,153,140,.12);
+
+  color: #05998c;
+
+  font-weight: 600;
+
+  margin-bottom: 18px;
+}
+
+.heading h2 {
+  font-size: 3.5rem;
+
+  color: #111;
+
+  margin-bottom: 15px;
+}
+
+.heading p {
+  color: #666;
+
+  line-height: 1.8;
+}
+
+/* SLIDER */
+
+.slider {
+  width: 100%;
+
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+
+  gap: 25px;
+
+  width: max-content;
+
+  animation: scrollDesserts 30s linear infinite;
+}
+
+.track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollDesserts {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ITEM */
+
+.item {
+  width: 320px;
+
+  flex-shrink: 0;
+
+  text-align: center;
+}
+
+.item img {
+  width: 100%;
+  height: 320px;
+
+  object-fit: cover;
+
+  border-radius: 28px;
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,.08);
+
+  transition: .4s ease;
+}
+
+.item:hover img {
+  transform: translateY(-8px);
+}
+
+.item h3 {
+  margin-top: 18px;
+
+  font-size: 1.2rem;
+
+  color: #111;
+
+  font-weight: 600;
+}
+
+/* BUTTON */
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 70px;
+}
+
+.menuBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 16px 34px;
+
+  border-radius: 999px;
+
+  background: #05998c;
+
+  color: white;
+
+  font-weight: 600;
+
+  transition: .3s ease;
+}
+
+.menuBtn:hover {
+  background: #10b981;
+
+  transform: translateY(-4px);
+}
+
+/* TABLET */
+
+@media (max-width: 768px) {
+  .featured {
+    padding: 90px 0;
+  }
+
+  .heading h2 {
+    font-size: 2.4rem;
+  }
+
+  .item {
+    width: 250px;
+  }
+
+  .item img {
+    height: 250px;
+  }
+
+  .track {
+    gap: 18px;
+
+    animation-duration: 22s;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+  .heading {
+    padding: 0 6%;
+  }
+
+  .heading h2 {
+    font-size: 2rem;
+  }
+
+  .item {
+    width: 220px;
+  }
+
+  .item img {
+    height: 220px;
+  }
+}

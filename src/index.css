@@ -1,0 +1,143 @@
+:root {
+  --primary: #05998c;
+  --secondary: #10b981;
+
+  --cream: #f5f0d4;
+
+  --white: #ffffff;
+  --black: #111111;
+
+  --text-light: #666666;
+
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 15px 40px rgba(0, 0, 0, 0.12);
+
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 30px;
+
+  --transition: all 0.3s ease;
+}
+
+/* RESET */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+/* SMOOTH SCROLL */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* BODY */
+
+body {
+  background: var(--cream);
+
+  color: var(--black);
+
+  font-family: "Poppins", sans-serif;
+
+  overflow-x: hidden;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  text-rendering: optimizeLegibility;
+}
+
+/* LINKS */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* IMAGES */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* BUTTONS */
+
+button {
+  border: none;
+  outline: none;
+
+  background: none;
+
+  cursor: pointer;
+
+  font-family: inherit;
+}
+
+/* INPUTS */
+
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+/* FIX NAVBAR SCROLL OFFSET */
+
+section {
+  scroll-margin-top: 100px;
+}
+
+/* TEXT SELECTION */
+
+::selection {
+  background: var(--primary);
+  color: var(--white);
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}
+
+/* CONTAINER CLASS */
+
+.container {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+}
+
+/* REMOVE BLUE TAP HIGHLIGHT ON MOBILE */
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  overflow-x: hidden;
+}
