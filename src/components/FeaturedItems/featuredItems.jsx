@@ -1,5 +1,5 @@
 import { FaArrowRight } from "react-icons/fa";
-import styles from "./FeaturedItems.module.css";
+import styles from "./featuredItems.module.css";
 import featuredItems from "../../data/featuredData";
 
 function FeaturedItems() {
