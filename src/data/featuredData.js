@@ -3,7 +3,7 @@ import chickenWings from "../assets/featured/Chicken-wings.png";
 import tresLeches from "../assets/featured/Classic-Tres-Leches.png";
 import hotChocolate from "../assets/featured/Hot-Chocolate.png";
 import mangoShake from "../assets/featured/Mango-Thick-Shake.png";
-import strawberryCustard from "../assets/featured/Strawberry-Custard-pudding.png"; // use exact filename
+import strawberryCustard from "../assets/featured/Strawberry-Custard-Pudding.png"; // use exact filename
 
 const featuredItems = [
   {
